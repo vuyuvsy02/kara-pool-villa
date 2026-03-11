@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카라 A, B, C, D 상세 | 카라 풀빌라</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans KR', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f4f6f8',
+                            100: '#e4ebf0',
+                            200: '#cad6e1',
+                            300: '#a3bccc',
+                            400: '#759ab2',
+                            500: '#527f9b',
+                            600: '#416680',
+                            700: '#355369',
+                            800: '#2e4558',
+                            900: '#2a3a4a',
+                            950: '#1b2633',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html,
+        body {
+            word-break: keep-all;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-brand-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation (Simplified for subpage) -->
+    <nav
+        class="fixed w-full z-50 bg-brand-950/95 backdrop-blur-lg border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center text-white shadow-lg">
+        <a href="index.html"
+            class="flex items-center gap-3 relative z-10 cursor-pointer hover:opacity-80 transition-opacity">
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+            <span class="text-xl font-montserrat font-light tracking-[0.25em] uppercase drop-shadow-md">KARA POOL
+                VILLA</span>
+        </a>
+        <a href="http://pf.kakao.com/_bymZX/chat" target="_blank" rel="noopener noreferrer"
+            class="px-5 py-2.5 bg-brand-600/90 hover:bg-brand-500 backdrop-blur-md rounded-full text-white text-sm transition-all shadow-lg hover:shadow-brand-500/30 font-semibold tracking-wide flex items-center gap-2"><i
+                data-lucide="message-circle" class="w-4 h-4"></i>예약문의</a>
+    </nav>
+
+    <!-- Room Hero -->
+    <section class="relative pt-24 pb-12 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-8">
+                <span class="text-brand-500 font-semibold tracking-wider uppercase text-sm">6룸 (4동)</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-brand-900 mt-2 mb-4">카라 A, B, C, D동</h1>
+                <p class="text-gray-600 text-lg">프라이빗 대형 수영장과 고급 거실을 완비한 프리미엄 독채 빌라</p>
+            </div>
+
+            <!-- Main Media / Gallery Placeholder -->
+            <div
+                class="rounded-3xl overflow-hidden shadow-2xl relative bg-brand-900 group aspect-video md:aspect-[21/9]">
+                <video src="assets/카라abcd전경영상.mp4" autoplay loop muted playsinline
+                    class="w-full h-full object-cover"></video>
+            </div>
+
+            <!-- Future text hook for more photos -->
+            <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Gallery Images -->
+                <div class="rounded-2xl aspect-[4/3] overflow-hidden shadow-md group cursor-pointer">
+                    <img src="assets/rooms/KakaoTalk_20260311_144936534.jpg" alt="카라 A, B, C, D동 갤러리 1"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl aspect-[4/3] overflow-hidden shadow-md group cursor-pointer">
+                    <img src="assets/rooms/KakaoTalk_20260310_190506934_03.jpg" alt="카라 A, B, C, D동 갤러리 2"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl aspect-[4/3] overflow-hidden shadow-md group cursor-pointer">
+                    <img src="assets/rooms/KakaoTalk_20260310_190506934_04.jpg" alt="카라 A, B, C, D동 갤러리 3"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl aspect-[4/3] overflow-hidden shadow-md group cursor-pointer">
+                    <img src="assets/rooms/KakaoTalk_20260310_190506934_05.jpg" alt="카라 A, B, C, D동 갤러리 4"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl aspect-[4/3] overflow-hidden shadow-md group cursor-pointer">
+                    <img src="assets/rooms/KakaoTalk_20260310_190506934_08.jpg" alt="카라 A, B, C, D동 갤러리 5"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl aspect-[4/3] overflow-hidden shadow-md group cursor-pointer">
+                    <img src="assets/rooms/KakaoTalk_20260310_190506934_10.jpg" alt="카라 A, B, C, D동 갤러리 6"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl aspect-[4/3] overflow-hidden shadow-md group cursor-pointer">
+                    <img src="assets/rooms/침대.jpg" alt="카라 A, B, C, D동 갤러리 7"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="rounded-2xl aspect-[4/3] overflow-hidden shadow-md group cursor-pointer">
+                    <img src="assets/rooms/침대옆.jpg" alt="카라 A, B, C, D동 갤러리 8"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section -->
+    <section class="py-16 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+            <!-- Core Specs -->
+            <div class="lg:col-span-2 space-y-12">
+                <div class="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-gray-100">
+                    <h3
+                        class="text-2xl font-bold text-brand-900 mb-8 pb-4 border-b border-gray-100 flex items-center gap-3">
+                        <i data-lucide="info" class="text-brand-600"></i> 객실 상세 정보
+                    </h3>
+
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="font-bold text-brand-800 mb-3 flex items-center gap-2"><i data-lucide="home"
+                                    class="w-5 h-5 text-brand-500"></i> 유형 및 형태</h4>
+                            <p class="text-gray-700 leading-relaxed bg-brand-50/50 p-5 rounded-2xl">
+                                <strong>형태:</strong> 독채, 바베큐 서비스 가능, 풀빌라<br>
+                                <span class="block mt-2"><strong>유형:</strong> 거실, 부엌, 실내 수영장, <span
+                                        class="font-bold text-brand-600">침대룸 6개(킹사이즈 베드, 룸당 개별 화장실)</span>, 샤워실,
+                                    테라스</span>
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-brand-800 mb-3 flex items-center gap-2"><i data-lucide="tv"
+                                    class="w-5 h-5 text-brand-500"></i> 구비 시설</h4>
+                            <div class="bg-white border border-brand-100 p-5 rounded-2xl">
+                                <ul class="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-4 text-sm text-gray-700">
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> TV (한국 방송 및 VOD 시청 가능)</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> 에어컨</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> 소파, 식탁, 와이파이</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> 휴지, 흡연테이블</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> 킹사이즈 침대</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> 비데, 헤어드라이기</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> 샴푸, 바디워시, 비누</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> 칫솔, 치약, 손세정제</li>
+                                    <li class="flex items-center gap-2"><i data-lucide="check"
+                                            class="w-4 h-4 text-brand-500"></i> 페이스 & 바디 타올</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-bold text-brand-800 mb-3 flex items-center gap-2"><i data-lucide="coffee"
+                                    class="w-5 h-5 text-brand-500"></i> 주방 용품</h4>
+                            <p
+                                class="text-gray-700 leading-relaxed text-sm bg-brand-50/50 p-5 rounded-2xl text-balance">
+                                냉장고, 음료냉장고, 하이라이터, 전자레인지, 밥솥, 커피포트, 냄비, 가위, 집게, 수저, 행주, 냄비받침대, 도마, 후라이팬, 소주잔, 물컵, 식기
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Sticky Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="sticky top-28 bg-white rounded-3xl p-8 shadow-xl border border-brand-100">
+                    <h3 class="text-xl font-bold text-brand-900 mb-6">예약 전 확인사항</h3>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4 p-4 bg-brand-50 rounded-2xl">
+                            <div class="bg-white p-2 rounded-xl text-brand-600 shadow-sm shrink-0">
+                                <i data-lucide="log-in" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-brand-900 text-sm mb-1">체크인 (입실)</h5>
+                                <p class="text-gray-600 text-sm">15:00 부터 <br><span class="text-xs text-gray-500">* 상황에
+                                        따라 변동 가능</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-brand-50 rounded-2xl">
+                            <div class="bg-white p-2 rounded-xl text-brand-600 shadow-sm shrink-0">
+                                <i data-lucide="log-out" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-brand-900 text-sm mb-1">체크아웃 (퇴실)</h5>
+                                <p class="text-gray-600 text-sm">11:00 까지 <br><span class="text-xs text-brand-600">* 사전
+                                        문의시 레이트 체크아웃 가능</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/z96uhyoGxgnSpJkX9?g_st=akt" target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-full py-4 mb-4 bg-white border-2 border-brand-600 text-brand-600 rounded-xl font-bold hover:bg-brand-50 transition-colors shadow-sm flex items-center justify-center gap-2">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        카라 A,B,C,D동 구글맵 위치
+                    </a>
+
+                    <a href="http://pf.kakao.com/_bymZX/chat" target="_blank" rel="noopener noreferrer"
+                        class="w-full py-4 bg-brand-600 text-white rounded-xl font-bold hover:bg-brand-500 transition-colors shadow-lg shadow-brand-600/20 flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        해당 객실 예약상담
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-950 text-gray-400 py-12 text-center border-t border-gray-800">
+        <p>&copy; 2026 Kara Pool Villa. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox"
+        class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm cursor-pointer" onclick="closeLightbox()"></div>
+        <button onclick="closeLightbox()"
+            class="absolute top-6 right-6 text-white hover:text-brand-300 z-10 transition-transform hover:scale-110">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <img id="lightboxImg" src="" alt="확대된 이미지"
+            class="relative z-10 max-h-[90vh] max-w-full rounded-xl shadow-2xl object-contain transition-transform duration-300 scale-95">
+    </div>
+
+    <script>
+        // Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxImg.classList.remove('scale-95');
+                lightboxImg.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        // Initialize Lucide Icons & Setup Gallery
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            // Allow all gallery image wrappers to open lightbox
+            const galleryWrappers = document.querySelectorAll('.aspect-\\[4\\/3\\].cursor-pointer');
+            galleryWrappers.forEach(wrapper => {
+                const img = wrapper.querySelector('img');
+                if (img) {
+                    wrapper.addEventListener('click', () => {
+                        openLightbox(img.src);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

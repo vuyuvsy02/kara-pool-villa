@@ -1,0 +1,768 @@
+﻿<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카라 풀빌라 | 필리핀 클락 최고급 프라이빗 풀빌라</title>
+    <meta name="description" content="필리핀 클락에 위치한 최고급 프라이빗 풀빌라, 카라 풀빌라에서 완벽한 휴식을 경험하세요. 골프, 마사지, 푸닝 온천 예약 서비스 제공.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans KR', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f4f6f8',
+                            100: '#e4ebf0',
+                            200: '#cad6e1',
+                            300: '#a3bccc',
+                            400: '#759ab2',
+                            500: '#527f9b',
+                            600: '#416680',
+                            700: '#355369',
+                            800: '#2e4558',
+                            900: '#2a3a4a',
+                            950: '#1b2633',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        html,
+        body {
+            word-break: keep-all;
+        }
+
+        /* Animations */
+        .fade-in-up {
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="font-sans text-gray-800 bg-brand-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center text-white bg-transparent">
+        <div class="flex items-center gap-3 relative z-10 cursor-pointer" onclick="window.scrollTo(0,0)">
+            <span class="text-2xl font-montserrat font-light tracking-[0.25em] uppercase drop-shadow-md">KARA POOL
+                VILLA</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8 font-medium">
+            <a href="#about" class="hover:text-brand-200 transition-colors drop-shadow-md">소개</a>
+            <a href="#rooms" class="hover:text-brand-200 transition-colors drop-shadow-md">객실안내</a>
+            <a href="#services" class="hover:text-brand-200 transition-colors drop-shadow-md">부킹 서비스</a>
+            <a href="#location" class="hover:text-brand-200 transition-colors drop-shadow-md">오시는 길</a>
+            <a href="http://pf.kakao.com/_bymZX/chat" target="_blank" rel="noopener noreferrer"
+                class="px-5 py-2.5 bg-brand-600/90 hover:bg-brand-500 backdrop-blur-md rounded-full text-white text-sm transition-all shadow-lg hover:shadow-brand-500/30 font-semibold tracking-wide flex items-center gap-2"><i
+                    data-lucide="message-circle" class="w-4 h-4"></i>예약문의</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden z-10 p-2 drop-shadow-md">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-brand-950/95 backdrop-blur-xl z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 text-2xl text-white font-medium">
+        <a href="#about" class="mobile-link hover:text-brand-300 transition-colors">소개</a>
+        <a href="#rooms" class="mobile-link hover:text-brand-300 transition-colors">객실안내</a>
+        <a href="#services" class="mobile-link hover:text-brand-300 transition-colors">부킹 서비스</a>
+        <a href="#location" class="mobile-link hover:text-brand-300 transition-colors">오시는 길</a>
+        <a href="http://pf.kakao.com/_bymZX/chat" target="_blank" rel="noopener noreferrer"
+            class="mobile-link px-8 py-3 bg-brand-600 rounded-full mt-4 flex items-center gap-2"><i
+                data-lucide="message-circle" class="w-6 h-6"></i>예약문의</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <!-- Background Video -->
+        <div class="absolute inset-0 w-full h-full z-0 bg-black">
+            <video autoplay loop muted playsinline
+                class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover transform -translate-x-1/2 -translate-y-1/2 opacity-60">
+                <source src="assets/마당아이들.mp4" type="video/mp4">
+            </video>
+            <!-- Overlay gradient to make text readable -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-brand-50/90 z-10"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 text-center px-4 flex flex-col items-center max-w-4xl mx-auto space-y-6 fade-in-up">
+            <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight drop-shadow-xl leading-tight">
+                당신만을 위한<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-200 to-white">완벽한 프라이빗 휴식</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 font-light max-w-2xl mt-6 drop-shadow-md">
+                필리핀 클락 최고급 시설을 자랑하는 카라 풀빌라에서<br class="hidden md:block"> 골프, 마사지, 온천까지 특별한 여정을 경험하세요.
+            </p>
+            <div class="pt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="http://pf.kakao.com/_bymZX/chat" target="_blank" rel="noopener noreferrer"
+                    class="px-8 py-4 bg-[#FEE500] text-[#191919] rounded-full font-semibold min-w-[200px] hover:bg-[#FEE500]/90 transition-all shadow-xl hover:shadow-[#FEE500]/30 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    카카오톡 문의하기
+                </a>
+                <a href="#services"
+                    class="px-8 py-4 bg-transparent border border-white text-white rounded-full font-semibold min-w-[200px] hover:bg-white/10 backdrop-blur-sm transition-all transform hover:-translate-y-1 text-center">
+                    부킹 서비스
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce flex flex-col items-center gap-2 cursor-pointer text-white/70 hover:text-white transition-colors"
+            onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            <span class="text-xs tracking-widest font-medium uppercase">Scroll</span>
+            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-950 text-gray-400 py-12 border-t border-gray-800 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <span class="text-xl font-montserrat font-light tracking-[0.25em] uppercase text-gray-300">KARA POOL
+                    VILLA</span>
+            </div>
+            <div class="text-sm">
+                <p>&copy; 2026 Kara Pool Villa. All rights reserved.</p>
+                <div class="flex gap-4 mt-2 justify-center md:justify-end">
+                    <a href="#" class="hover:text-white transition-colors">이용약관</a>
+                    <a href="#" class="hover:text-white transition-colors">개인정보처리방침</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-6xl mx-auto flex flex-col gap-12">
+            <div class="w-full space-y-8 fade-in-up text-center" style="animation-delay: 0.1s;">
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-900 tracking-tight">당신만의 프라이빗 유토피아</h2>
+                <div class="w-20 h-1 bg-brand-500 rounded-full mx-auto"></div>
+                <p class="text-gray-600 leading-relaxed text-lg max-w-4xl mx-auto text-balance">
+                    아름다운 자연 속 프라이빗한 공간에서 자유로움과 평온함을 누려보세요.<br>
+                    카라 풀빌라는 오직 한 팀만을 위한 독립된 공간과 프리미엄 시설을 제공합니다.<br>
+                    <span class="block mt-2 text-brand-800">
+                        아름다운 정원 속 빌라에서 넓은 수영장과 함께 노래방, <br>
+                        프라이빗한 식사까지 모든 즐거움을 완벽하게 한 공간에서 누리실 수 있습니다.
+                    </span>
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 max-w-3xl mx-auto">
+                    <div class="flex items-center justify-center gap-3">
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 group hover:bg-brand-600 hover:text-white transition-colors">
+                            <i data-lucide="waves" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-medium text-brand-900">대형 프라이빗 풀</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 group hover:bg-brand-600 hover:text-white transition-colors">
+                            <i data-lucide="utensils" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-medium text-brand-900">직원 전담 BBQ</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 group hover:bg-brand-600 hover:text-white transition-colors">
+                            <i data-lucide="wifi" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-medium text-brand-900">고속 Wi-Fi</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 group hover:bg-brand-600 hover:text-white transition-colors">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <span class="font-medium text-brand-900">24시간 보안</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- YouTube Videos -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 fade-in-up" style="animation-delay: 0.3s;">
+                <a href="https://youtu.be/wzUhfiLMfM4" target="_blank"
+                    class="block aspect-video rounded-2xl overflow-hidden shadow-2xl relative group bg-black">
+                    <img src="https://img.youtube.com/vi/wzUhfiLMfM4/maxresdefault.jpg" alt="유튜브 영상 1"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+                        <div
+                            class="w-16 h-16 bg-red-600 rounded-full flex justify-center items-center text-white shadow-lg transform group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 ml-1 fill-current" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://youtu.be/jAicTnfXaTs" target="_blank"
+                    class="block aspect-video rounded-2xl overflow-hidden shadow-2xl relative group bg-black">
+                    <img src="https://img.youtube.com/vi/jAicTnfXaTs/maxresdefault.jpg" alt="유튜브 영상 2"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+                        <div
+                            class="w-16 h-16 bg-red-600 rounded-full flex justify-center items-center text-white shadow-lg transform group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 ml-1 fill-current" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-24 px-6 md:px-12 bg-brand-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-brand-500 font-semibold tracking-wider uppercase text-sm">Accommodation</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-900">객실 안내</h2>
+                <div class="w-20 h-1 bg-brand-500 rounded-full mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg pt-4">신축 6룸 4동, 6룸 2동, 5룸 2동을 운영하여 대가족, 단체 모임, 워크샵 등
+                    다인원 동반 예약에 최적화된 공간을 제공합니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Room Card 1 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <video src="assets/카라abcd전경영상.mp4" autoplay loop muted playsinline
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"></video>
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-semibold text-brand-800 shadow-sm">
+                            6룸 (4동)</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-brand-900 mb-2 group-hover:text-brand-600 transition-colors">
+                            카라 A, B, C, D동</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-2">프라이빗 대형 수영장과 고급 거실을 완비한 6룸 프리미엄 독채 빌라</p>
+                        <a href="room_abcd.html"
+                            class="flex items-center justify-between border-t border-gray-100 pt-6 group/btn">
+                            <span
+                                class="text-brand-600 font-bold text-lg group-hover/btn:text-brand-800 transition-colors">상세보기</span>
+                            <div
+                                class="w-10 h-10 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center group-hover/btn:bg-brand-600 group-hover/btn:text-white transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="assets/rooms/외관낮위방향.jpg" alt="카라 E, F동"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-semibold text-brand-800 shadow-sm">
+                            5룸 (2동)</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-brand-900 mb-2 group-hover:text-brand-600 transition-colors">
+                            카라 E, F동</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-2">아늑하고 여유로운 휴식이 가능한 세련된 구조의 5룸 프라이빗 빌라</p>
+                        <a href="room_ef.html"
+                            class="flex items-center justify-between border-t border-gray-100 pt-6 group/btn">
+                            <span
+                                class="text-brand-600 font-bold text-lg group-hover/btn:text-brand-800 transition-colors">상세보기</span>
+                            <div
+                                class="w-10 h-10 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center group-hover/btn:bg-brand-600 group-hover/btn:text-white transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div
+                    class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="assets/rooms/외관편집.png" alt="카라 1, 2동"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-semibold text-brand-800 shadow-sm">
+                            6룸 (2동)</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-brand-900 mb-2 group-hover:text-brand-600 transition-colors">
+                            카라 1, 2동</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-2">넓은 실내 수영장과 야외 테라스를 갖춘 6룸 럭셔리 빌라</p>
+                        <a href="room_12.html"
+                            class="flex items-center justify-between border-t border-gray-100 pt-6 group/btn">
+                            <span
+                                class="text-brand-600 font-bold text-lg group-hover/btn:text-brand-800 transition-colors">상세보기</span>
+                            <div
+                                class="w-10 h-10 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center group-hover/btn:bg-brand-600 group-hover/btn:text-white transition-colors">
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concierge Services Section -->
+    <section id="services" class="py-24 px-6 md:px-12 bg-white relative overflow-hidden">
+        <!-- Decorative Background -->
+        <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-brand-50 rounded-l-[100px] z-0 hidden lg:block pointer-events-none">
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto relative z-10 flex flex-col lg:flex-row gap-16 items-center border-b border-brand-50 pb-24">
+            <div class="w-full lg:w-1/3 space-y-8">
+                <span class="text-brand-500 font-semibold tracking-wider uppercase text-sm">Concierge</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-brand-900 leading-tight">고객 맞춤형<br>부킹 서비스</h2>
+                <div class="w-20 h-1 bg-brand-500 rounded-full"></div>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    단순한 숙박을 넘어, 여행의 처음부터 끝까지 <br>
+                    번거로운 예약과 <strong>전문 가이드 매칭</strong>을 직접 도와드립니다.
+                </p>
+                <div class="pt-4">
+                    <a href="http://pf.kakao.com/_bymZX/chat" target="_blank" rel="noopener noreferrer"
+                        class="inline-block px-8 py-4 bg-brand-900 text-white rounded-full font-semibold hover:bg-brand-800 transition-colors shadow-lg shadow-brand-900/20 transform hover:-translate-y-1">
+                        서비스 문의하기
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6 relative">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-brand-50 relative overflow-hidden group cursor-pointer"
+                    onclick="openServiceModal('golf')">
+                    <div
+                        class="absolute -right-4 -top-4 w-32 h-32 bg-brand-50 rounded-full z-0 group-hover:scale-[2.5] transition-transform duration-500 ease-in-out">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-brand-100/80 backdrop-blur-sm text-brand-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="flag-triangle-right" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-900 mb-3 group-hover:text-brand-900">명문 골프장 예약</h3>
+                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors">미모사, 썬밸리, 프라데라 등 필리핀 클락 최고급
+                            명문 골프장 부킹 및 패키지를 도와드립니다.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 (Special Recommended / Tour Activity) -->
+                <a href="tour_activity.html"
+                    class="block bg-white p-8 rounded-2xl shadow-xl md:translate-y-8 hover:-translate-y-2 lg:hover:-translate-y-4 transition-all duration-300 border-2 border-brand-200 relative overflow-hidden group mt-6 md:mt-0 cursor-pointer shadow-brand-500/20">
+
+                    <!-- Blinking Badge -->
+                    <div class="absolute top-4 right-4 z-20">
+                        <span
+                            class="inline-flex items-center px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs font-bold tracking-wide rounded-full animate-pulse shadow-md">
+                            추천 투어
+                        </span>
+                    </div>
+
+                    <div
+                        class="absolute -right-4 -top-4 w-32 h-32 bg-brand-50 rounded-full z-0 group-hover:scale-[2.5] transition-transform duration-500 ease-in-out">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-brand-100/80 backdrop-blur-sm text-brand-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="map" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-900 mb-3 group-hover:text-brand-700 transition-colors">
+                            투어/액티비티 예약</h3>
+                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors">푸닝온천, 호핑투어, 요트, ATV 등 필리핀
+                            클락과 앙헬레스 주변의 다이내믹한 즐길 거리를 경험하세요.</p>
+                    </div>
+                </a>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:-translate-y-2 transition-transform duration-300 border border-brand-50 relative overflow-hidden group cursor-pointer"
+                    onclick="openServiceModal('massage')">
+                    <div
+                        class="absolute -right-4 -top-4 w-32 h-32 bg-brand-50 rounded-full z-0 group-hover:scale-[2.5] transition-transform duration-500 ease-in-out">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-brand-100/80 backdrop-blur-sm text-brand-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="sparkles" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-900 mb-3">출장 마사지 및 샵 예약</h3>
+                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors">라운딩이나 관광 후 지친 몸을 풀 수 있도록 빌라
+                            내 편안한 출장 마사지 또는 검증된 마사지 샵 예약을 도와드립니다.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 (Vehicle) -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl md:translate-y-8 hover:-translate-y-2 lg:hover:-translate-y-4 transition-transform duration-300 border border-brand-50 relative overflow-hidden group mt-6 md:mt-0 cursor-pointer"
+                    onclick="openServiceModal('vehicle')">
+                    <div
+                        class="absolute -right-4 -top-4 w-32 h-32 bg-brand-50 rounded-full z-0 group-hover:scale-[2.5] transition-transform duration-500 ease-in-out">
+                    </div>
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-brand-100/80 backdrop-blur-sm text-brand-600 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-600 group-hover:text-white transition-colors duration-300">
+                            <i data-lucide="car" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brand-900 mb-3">전용 차량 / 렌트</h3>
+                        <p class="text-gray-600 group-hover:text-gray-800 transition-colors">9인승 VAN, 15인승 VAN, 마닐라 공항
+                            픽업 및 드롭 지원</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential Information & Amenities Section -->
+    <section id="amenities" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 space-y-4">
+                <span class="text-brand-500 font-semibold tracking-wider uppercase text-sm">Information &
+                    Services</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-brand-900">객실 정보 및 제공 서비스</h2>
+                <div class="w-20 h-1 bg-brand-500 rounded-full mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Room Details -->
+                <div class="bg-brand-50 rounded-3xl p-8 md:p-10 shadow-sm border border-brand-100">
+                    <h3 class="text-2xl font-bold text-brand-900 mb-6 flex items-center gap-3">
+                        <i data-lucide="info" class="text-brand-600"></i> 객실 상세 정보
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-brand-800 mb-2">유형 및 형태</h4>
+                            <p class="text-gray-700 leading-relaxed text-sm"><strong>형태:</strong> 독채, 바베큐 서비스 가능,
+                                풀빌라<br>
+                                <strong>유형:</strong> 거실, 부엌, 실내 수영장, 침대룸 6개(킹사이즈 베드, 룸당 개별 화장실), 샤워실, 테라스<br>
+                                <span class="text-brand-600 text-xs font-semibold">* 카라 E, F동은 침대룸 5개입니다.</span>
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-800 mb-2">구비 시설</h4>
+                            <p class="text-gray-700 leading-relaxed text-sm text-balance">TV (한국 방송 및 VOD 시청 가능), 에어컨,
+                                소파, 와이파이, 식탁, 휴지, 흡연테이블, 침대(킹), 비데, 헤어드라이기, 샴푸, 바디워시, 손세정제, 칫솔, 치약, 비누, 페이스 타올, 바디 타올
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-800 mb-2">주방 용품</h4>
+                            <p class="text-gray-700 leading-relaxed text-sm text-balance">냉장고, 음료냉장고, 하이라이터, 전자레인지, 밥솥,
+                                커피포트, 냄비, 가위, 집게, 수저, 행주, 냄비받침대, 도마, 후라이팬, 소주잔, 물컵, 식기</p>
+                        </div>
+                        <div class="pt-4 border-t border-brand-200">
+                            <h4 class="font-bold text-brand-800 mb-2 flex items-center gap-2"><i data-lucide="clock"
+                                    class="w-4 h-4"></i> 체크인 / 체크아웃</h4>
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm gap-2">
+                                <span class="text-gray-700"><strong>입실:</strong> 15:00 부터 <span
+                                        class="text-xs text-gray-500 block sm:inline">(상황에 따라 변동 가능)</span></span>
+                                <span class="text-gray-700"><strong>퇴실:</strong> 11:00 <span
+                                        class="text-xs text-brand-600 font-semibold block sm:inline">(사전 문의시 레이트 체크아웃
+                                        가능)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Services -->
+                <div>
+                    <h3 class="text-2xl font-bold text-brand-900 mb-6 flex items-center gap-3">
+                        <i data-lucide="star" class="text-brand-600"></i> 주요 서비스
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div
+                            class="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all">
+                            <h4 class="font-bold text-brand-800 mb-1 flex items-center gap-2"><i data-lucide="coffee"
+                                    class="w-4 h-4"></i> 조식 제공</h4>
+                            <p class="text-xs text-gray-600">체크인 손님께 매일 원하시는 시간에 무료 조식이 제공됩니다.</p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all">
+                            <h4 class="font-bold text-brand-800 mb-1 flex items-center gap-2"><i data-lucide="waves"
+                                    class="w-4 h-4"></i> 실내 수영장</h4>
+                            <p class="text-xs text-gray-600">1층 객실 내 와이드 풀에서 프라이빗한 시간을 보내세요.</p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all">
+                            <h4 class="font-bold text-brand-800 mb-1 flex items-center gap-2"><i data-lucide="mic-2"
+                                    class="w-4 h-4"></i> 대형 스크린 노래방 기기</h4>
+                            <p class="text-xs text-gray-600">65인치 대형 스크린으로 식사를 하시면서 편안하게 노래를 즐기실 수 있습니다.</p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all">
+                            <h4 class="font-bold text-brand-800 mb-1 flex items-center gap-2"><i data-lucide="flame"
+                                    class="w-4 h-4"></i> 바베큐 서비스</h4>
+                            <p class="text-xs text-gray-600">숯불 바베큐 그릴에서 직원이 직접 요리해드립니다. (500페소 현장결제)</p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all">
+                            <h4 class="font-bold text-brand-800 mb-1 flex items-center gap-2"><i data-lucide="lock"
+                                    class="w-4 h-4"></i> 전 객실 안전 금고</h4>
+                            <p class="text-xs text-gray-600">귀중품을 보관하실 수 있도록 안전 금고를 설치하였습니다.</p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all">
+                            <h4 class="font-bold text-brand-800 mb-1 flex items-center gap-2"><i data-lucide="tv"
+                                    class="w-4 h-4"></i> 한국 방송 / 인터넷</h4>
+                            <p class="text-xs text-gray-600">65인치 스크린으로 한국 방송 시청 및 초고속 와이파이가 제공됩니다.</p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all">
+                            <h4 class="font-bold text-brand-800 mb-1 flex items-center gap-2"><i data-lucide="shirt"
+                                    class="w-4 h-4"></i> 무료 세탁 서비스</h4>
+                            <p class="text-xs text-gray-600">따로 맡길 필요없이 직원이 깨끗하게 세탁하여 준비해드립니다.</p>
+                        </div>
+                        <div
+                            class="bg-white border border-gray-100 p-5 rounded-2xl shadow-sm hover:shadow-md hover:border-brand-200 transition-all">
+                            <h4 class="font-bold text-brand-800 mb-1 flex items-center gap-2"><i data-lucide="wine"
+                                    class="w-4 h-4"></i> 미니 바 (Mini Bar)</h4>
+                            <p class="text-xs text-gray-600">다양한 한국 스낵 및 음료가 준비되어있어 편리하게 이용하실 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="location" class="py-24 px-6 md:px-12 bg-brand-950 text-white relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="space-y-8">
+                <span class="text-brand-300 font-semibold tracking-wider uppercase text-sm">Location</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white">오시는 길</h2>
+                <div class="w-20 h-1 bg-brand-500 rounded-full"></div>
+                <p class="text-gray-300 text-lg leading-relaxed">클락 국제공항에서 단 15분 거리. 주요 골프장 및 관광지와 인접하여 최적의 접근성을 자랑합니다.
+                    풀빌라 전용 빌리지인 <strong>파란 가든 빌리지</strong> 내에 위치하여 완벽한 보안과 프라이버시를 보장합니다.</p>
+
+                <div class="space-y-8 pt-8 border-t border-brand-800">
+                    <div
+                        class="flex items-start gap-5 hover:bg-brand-900/50 p-4 rounded-xl transition-colors cursor-pointer group">
+                        <div
+                            class="w-14 h-14 rounded-full bg-brand-800 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-600 transition-colors shadow-lg">
+                            <i data-lucide="map-pin"
+                                class="w-6 h-6 text-brand-200 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-2 text-white">주소</h4>
+                            <p class="text-gray-400 group-hover:text-gray-300 transition-colors">BLOCK 3 LOT 1, Paran
+                                village<br>Brgy. Pampang, Angeles City</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-start gap-5 hover:bg-brand-900/50 p-4 rounded-xl transition-colors cursor-pointer group">
+                        <div
+                            class="w-14 h-14 rounded-full bg-brand-800 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-600 transition-colors shadow-lg">
+                            <i data-lucide="phone"
+                                class="w-6 h-6 text-brand-200 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-2 text-white">상담 및 문의</h4>
+                            <p class="text-gray-400 group-hover:text-gray-300 transition-colors mb-1">카카오톡 ID : <span
+                                    class="font-semibold text-white">karapool2</span></p>
+                            <p class="text-gray-400 group-hover:text-gray-300 transition-colors">현지 전화번호 : <span
+                                    class="font-semibold text-white tracking-wider">0969 368 3267</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="h-[400px] lg:h-auto rounded-3xl overflow-hidden shadow-2xl relative bg-brand-900 flex items-center justify-center border border-brand-800 group cursor-pointer">
+                <!-- Map representation -->
+                <div class="absolute inset-0 z-0">
+                    <!-- A stylized map view to replace the iframe, can be updated with an actual map image or iframe later -->
+                    <div class="w-full h-full bg-brand-900 overflow-hidden relative">
+                        <div class="absolute inset-0 opacity-10"
+                            style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;">
+                        </div>
+                        <!-- map pin pulse -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div class="w-20 h-20 bg-brand-500/30 rounded-full animate-ping absolute -top-5 -left-5">
+                            </div>
+                            <div
+                                class="w-10 h-10 bg-brand-500 rounded-full flex items-center justify-center relative z-10 shadow-[0_0_15px_rgba(82,127,155,0.8)] border-2 border-white">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-brand-950/80 to-transparent flex flex-col justify-end p-8">
+                        <div
+                            class="bg-brand-950/80 backdrop-blur-md p-6 rounded-2xl border border-brand-800 transform translate-y-4 group-hover:translate-y-0 opacity-90 group-hover:opacity-100 transition-all duration-300 mr-8">
+                            <h3 class="text-xl font-bold mb-2">카라 풀빌라 위치 보기</h3>
+                            <p class="text-gray-400 text-sm mb-4">파란 가든 빌리지 내 위치</p>
+                            <a href="https://maps.app.goo.gl/z96uhyoGxgnSpJkX9?g_st=akt" target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center gap-2 text-sm font-semibold text-brand-300 hover:text-white transition-colors">
+                                상세 지도 열기 <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section id="contact" class="py-20 px-6 bg-brand-600 text-white text-center relative overflow-hidden">
+        <div
+            class="absolute inset-0 bg-[url('assets/rooms/지피티편집사진필터적용.jpg')] opacity-10 bg-cover bg-center mix-blend-overlay">
+        </div>
+        <div class="max-w-4xl mx-auto relative z-10 space-y-8">
+            <h2 class="text-3xl md:text-5xl font-bold">지금 바로 특별한 휴식을 예약하세요</h2>
+            <p class="text-xl text-brand-100 font-light">고객님의 일정과 취향에 맞는 최적의 맞춤형 패키지를 제안해 드립니다.</p>
+            <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="http://pf.kakao.com/_bymZX/chat" target="_blank" rel="noopener noreferrer"
+                    class="px-8 py-4 bg-white text-brand-600 rounded-full font-bold text-lg hover:bg-brand-50 transition-colors shadow-xl hover:shadow-white/20 transform hover:-translate-y-1 inline-flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    카카오톡 실시간 문의
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer placeholder -->
+    <footer class="bg-brand-950 text-gray-400 py-12 text-center border-t border-gray-800">
+        <p>&copy; 2026 Kara Pool Villa. All rights reserved.</p>
+    </footer>
+
+    <!-- Room Details Modal -->
+    <div id="roomModal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-brand-950/80 backdrop-blur-sm" onclick="closeRoomModal()"></div>
+
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-2xl mx-auto mt-20 md:mt-32 max-h-[80vh] bg-white rounded-3xl shadow-2xl flex flex-col transform translate-y-8 transition-transform duration-300"
+            id="roomModalContent">
+            <!-- Header -->
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <div>
+                    <span id="modalRoomSubtitle" class="text-brand-500 font-semibold text-sm"></span>
+                    <h3 id="modalRoomTitle" class="text-2xl font-bold text-brand-900 mt-1"></h3>
+                </div>
+                <button onclick="closeRoomModal()"
+                    class="w-10 h-10 rounded-full bg-gray-100 text-gray-500 hover:bg-brand-100 hover:text-brand-600 flex items-center justify-center transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Body -->
+            <div class="p-6 md:p-8 overflow-y-auto custom-scrollbar flex-grow">
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-brand-800 mb-2 flex items-center gap-2"><i data-lucide="home"
+                                class="w-4 h-4 text-brand-500"></i> 유형 및 형태</h4>
+                        <p class="text-gray-700 leading-relaxed text-sm bg-brand-50/50 p-4 rounded-xl">
+                            <strong>형태:</strong> 독채, 바베큐 서비스 가능, 풀빌라<br>
+                            <strong>유형:</strong> 거실, 부엌, 실내 수영장, <span id="modalRoomCount"
+                                class="font-bold text-brand-600"></span>, 샤워실, 테라스
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-800 mb-2 flex items-center gap-2"><i data-lucide="tv"
+                                class="w-4 h-4 text-brand-500"></i> 구비 시설</h4>
+                        <p class="text-gray-700 leading-relaxed text-sm bg-brand-50/50 p-4 rounded-xl text-balance">
+                            TV (한국 방송 및 VOD 시청 가능), 에어컨, 소파, 와이파이, 식탁, 휴지, 흡연테이블, 침대(킹), 비데, 헤어드라이기, 샴푸, 바디워시, 손세정제, 칫솔,
+                            치약, 비누, 페이스 타올, 바디 타올
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-800 mb-2 flex items-center gap-2"><i data-lucide="coffee"
+                                class="w-4 h-4 text-brand-500"></i> 주방 용품</h4>
+                        <p class="text-gray-700 leading-relaxed text-sm bg-brand-50/50 p-4 rounded-xl text-balance">
+                            냉장고, 음료냉장고, 하이라이터, 전자레인지, 밥솥, 커피포트, 냄비, 가위, 집게, 수저, 행주, 냄비받침대, 도마, 후라이팬, 소주잔, 물컵, 식기
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Details Modal -->
+    <div id="serviceModal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-brand-950/80 backdrop-blur-sm" onclick="closeServiceModal()"></div>
+
+        <!-- Modal Content -->
+        <div class="relative w-full max-w-lg mx-auto mt-24 md:mt-32 max-h-[80vh] bg-white rounded-3xl shadow-2xl flex flex-col transform translate-y-8 transition-transform duration-300"
+            id="serviceModalContent">
+            <!-- Header -->
+            <div class="flex justify-between items-start p-6 border-b border-gray-100">
+                <div class="flex items-center gap-4">
+                    <div id="modalServiceIcon"
+                        class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center shadow-sm">
+                        <!-- Icon injected by JS -->
+                    </div>
+                    <div>
+                        <h3 id="modalServiceTitle" class="text-2xl font-bold text-brand-900"></h3>
+                    </div>
+                </div>
+                <button onclick="closeServiceModal()"
+                    class="w-10 h-10 rounded-full bg-gray-100 text-gray-500 hover:bg-brand-100 hover:text-brand-600 flex items-center justify-center transition-colors -mt-2 -mr-2">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Body -->
+            <div class="p-6 md:p-8 overflow-y-auto custom-scrollbar flex-grow space-y-6">
+                <p id="modalServiceDesc" class="text-gray-600 leading-relaxed bg-brand-50/30 p-4 rounded-xl"></p>
+
+                <div>
+                    <h4 class="font-bold text-brand-800 mb-3 border-b border-brand-100 pb-2">상세 안내</h4>
+                    <ul id="modalServiceDetails" class="space-y-3 text-gray-700 text-sm">
+                        <!-- List items injected by JS -->
+                    </ul>
+                </div>
+
+                <div class="pt-6 mt-6 border-t border-gray-100">
+                    <a href="http://pf.kakao.com/_bymZX/chat" target="_blank" rel="noopener noreferrer"
+                        class="w-full py-4 bg-brand-600 text-white rounded-xl font-bold hover:bg-brand-500 transition-colors shadow-lg shadow-brand-600/20 flex items-center justify-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        카카오톡 예약 문의
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
