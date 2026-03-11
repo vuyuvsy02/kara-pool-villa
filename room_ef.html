@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카라 E, F 상세 | 카라 풀빌라</title>
 
+    <!-- Open Graph / KakaoTalk Thumbnail -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="카라 풀빌라 | 카라 E, F동 안내">
+    <meta property="og:description" content="필리핀 클락 최고급 프라이빗 독채 풀빌라. 전용 수영장, 24시간 직원 상주, 명문 골프장 및 마사지 부킹 서비스.">
+    <meta property="og:image" content="https://kara-pool-villa.vercel.app/assets/og-image.jpg">
+    <meta property="og:url" content="https://kara-pool-villa.vercel.app/room_ef.html">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -296,11 +302,20 @@
             // Allow all gallery image wrappers to open lightbox
             const galleryWrappers = document.querySelectorAll('.aspect-\\[4\\/3\\].cursor-pointer');
             galleryWrappers.forEach(wrapper => {
-                const img = wrapper.querySelector('img');
-                if (img) {
+                // EF페이지는 img태그 자체가 .aspect-[4/3] .cursor-pointer를 가집니다.
+                // ABCD동은 div 래퍼가 이 클래스를 가지고 있습니다.
+                // 두 가지 경우를 모두 지원하도록 수정합니다.
+                if (wrapper.tagName.toLowerCase() === 'img') {
                     wrapper.addEventListener('click', () => {
-                        openLightbox(img.src);
+                        openLightbox(wrapper.src);
                     });
+                } else {
+                    const img = wrapper.querySelector('img');
+                    if (img) {
+                        wrapper.addEventListener('click', () => {
+                            openLightbox(img.src);
+                        });
+                    }
                 }
             });
         });
